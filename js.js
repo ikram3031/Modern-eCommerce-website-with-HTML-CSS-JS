@@ -1,29 +1,35 @@
 'use strict';
 
-//model variables
-
+// modal variables
 const modal = document.querySelector('[data-modal]');
 const modalCloseBtn = document.querySelector('[data-modal-close]');
 const modalCloseOverlay = document.querySelector('[data-modal-overlay]');
 
-//modal function
-const modalCloseFunc = function () { modal.classList.add('closed')}
+// modal function
+const modalCloseFunc = function () { modal.classList.add('closed') }
 
-//mopdal eventlistener
-modalCloseOverlay.addEventListener ('click' , modalCloseFunc);
+// modal eventListener
+modalCloseOverlay.addEventListener('click', modalCloseFunc);
 modalCloseBtn.addEventListener('click', modalCloseFunc);
 
 
-//notification toast variables
-const notificationToast = document.querySelector('[data-toast');
-const toastCloseBtn = document.querySelector('[data-toast-close');
 
-//notification toast eventlistener 
-toastCloseBtn.addEventListener('click', function(){
-    notificationToast.classList.add('closed');
-})
 
-//mobile menu variables
+
+// notification toast variables
+const notificationToast = document.querySelector('[data-toast]');
+const toastCloseBtn = document.querySelector('[data-toast-close]');
+
+// notification toast eventListener
+toastCloseBtn.addEventListener('click', function () {
+  notificationToast.classList.add('closed');
+});
+
+
+
+
+
+// mobile menu variables
 const mobileMenuOpenBtn = document.querySelectorAll('[data-mobile-menu-open-btn]');
 const mobileMenu = document.querySelectorAll('[data-mobile-menu]');
 const mobileMenuCloseBtn = document.querySelectorAll('[data-mobile-menu-close-btn]');
@@ -46,6 +52,10 @@ for (let i = 0; i < mobileMenuOpenBtn.length; i++) {
   overlay.addEventListener('click', mobileMenuCloseFunc);
 
 }
+
+
+
+
 
 // accordion variables
 const accordionBtn = document.querySelectorAll('[data-accordion-btn]');
@@ -76,4 +86,3 @@ for (let i = 0; i < accordionBtn.length; i++) {
   });
 
 }
-
